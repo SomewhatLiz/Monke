@@ -1,6 +1,0 @@
-E:\Coding\Game Dev\godot-multiplayer-tutorials-master\godot-multiplayer-tutorials-master\LobbylessTutorial\Server\.mono\temp\bin\Debug\MonkeServer.dll
-E:\Coding\Game Dev\godot-multiplayer-tutorials-master\godot-multiplayer-tutorials-master\LobbylessTutorial\Server\.mono\temp\bin\Debug\MonkeServer.pdb
-E:\Coding\Game Dev\godot-multiplayer-tutorials-master\godot-multiplayer-tutorials-master\LobbylessTutorial\Server\.mono\temp\obj\Debug\MonkeServer.csprojAssemblyReference.cache
-E:\Coding\Game Dev\godot-multiplayer-tutorials-master\godot-multiplayer-tutorials-master\LobbylessTutorial\Server\.mono\temp\obj\Debug\MonkeServer.csproj.CoreCompileInputs.cache
-E:\Coding\Game Dev\godot-multiplayer-tutorials-master\godot-multiplayer-tutorials-master\LobbylessTutorial\Server\.mono\temp\obj\Debug\MonkeServer.dll
-E:\Coding\Game Dev\godot-multiplayer-tutorials-master\godot-multiplayer-tutorials-master\LobbylessTutorial\Server\.mono\temp\obj\Debug\MonkeServer.pdb
