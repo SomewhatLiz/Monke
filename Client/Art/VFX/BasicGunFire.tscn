@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.0757576, 0.186869, 0.406566, 0.929293 )
+colors = PoolColorArray( 1, 0.827451, 0.0980392, 1, 1, 0.568627, 0.121569, 1, 1, 0.160784, 0.458824, 1, 0.94902, 0.133333, 1, 1, 0.54902, 0.121569, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Curve" id=3]
+max_value = 100.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+curve = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 0.701136 ), 0.0, 0.0, 0, 0, Vector2( 0.639618, 0.0193182 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 1
+emission_sphere_radius = 0.1
+direction = Vector3( 0, 0, 1 )
+spread = 5.0
+flatness = 0.64
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 10.0
+damping = 10.0
+damping_curve = SubResource( 4 )
+scale = 0.2
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 2 )
+
+[sub_resource type="SpatialMaterial" id=8]
+flags_albedo_tex_force_srgb = true
+vertex_color_use_as_albedo = true
+albedo_color = Color( 5, 5, 5, 1 )
+roughness = 0.5
+
+[sub_resource type="SphereMesh" id=9]
+material = SubResource( 8 )
+radius = 0.25
+height = 0.5
+
+[node name="BasicGunFire" type="Particles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00723171, -0.0187538, -0.00642157 )
+emitting = false
+amount = 10
+one_shot = true
+explosiveness = 1.0
+visibility_aabb = AABB( -0.00885353, -0.0214439, -0.022922, 0.017711, 0.0428869, 0.0458439 )
+local_coords = false
+process_material = SubResource( 7 )
+draw_pass_1 = SubResource( 9 )

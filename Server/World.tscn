@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://World.gd" type="Script" id=1]
+
+[node name="World" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Players" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.83289 )
+current = true
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "asdasd"
+__meta__ = {
+"_edit_use_anchors_": false
+}

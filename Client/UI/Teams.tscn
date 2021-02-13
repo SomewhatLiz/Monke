@@ -1,0 +1,82 @@
+[gd_scene format=2]
+
+[node name="Teams" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 12.6992
+margin_top = 260.334
+margin_right = 171.699
+margin_bottom = 328.334
+text = "Revenge"
+items = [ "Revenge", null, false, 0, null, "King Of The Hill", null, false, 1, null, "Lives", null, false, 2, null, "Deathmatch", null, false, 3, null, "Kill Quota", null, false, 4, null, "Keep The Peace", null, false, 5, null, "Bossfight", null, false, 7, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 244.0
+margin_top = 19.0
+margin_right = 494.0
+margin_bottom = 564.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gravity" type="CheckBox" parent="VBoxContainer"]
+margin_right = 250.0
+margin_bottom = 24.0
+text = "Gravity"
+
+[node name="NoGuns" type="CheckBox" parent="VBoxContainer"]
+margin_top = 28.0
+margin_right = 250.0
+margin_bottom = 52.0
+text = "No Guns"
+
+[node name="SlowMotion" type="CheckBox" parent="VBoxContainer"]
+margin_top = 56.0
+margin_right = 250.0
+margin_bottom = 80.0
+text = "Slow Motion"
+
+[node name="Speed" type="CheckBox" parent="VBoxContainer"]
+margin_top = 84.0
+margin_right = 250.0
+margin_bottom = 108.0
+text = "Speed"
+
+[node name="OneShot" type="CheckBox" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 250.0
+margin_bottom = 136.0
+text = "One Shot"
+
+[node name="EarthQuakes" type="CheckBox" parent="VBoxContainer"]
+margin_top = 140.0
+margin_right = 250.0
+margin_bottom = 164.0
+text = "Earth Quakes"
+
+[node name="RandomInvertedView" type="CheckBox" parent="VBoxContainer"]
+margin_top = 168.0
+margin_right = 250.0
+margin_bottom = 192.0
+text = "Random Inverted View"
+
+[node name="HeadshotsOnly" type="CheckBox" parent="VBoxContainer"]
+margin_top = 196.0
+margin_right = 250.0
+margin_bottom = 220.0
+text = "Headshots Only"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 659.0
+margin_top = 151.0
+margin_right = 1025.0
+margin_bottom = 517.0

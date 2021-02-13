@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=2]
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0.103704, 1 )
+colors = PoolColorArray( 1, 0, 0, 1, 0.350586, 0.0123253, 0.0123253, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.303797, 1 ), -0.0782636, -0.0782636, 0, 0, Vector2( 0.955696, 0.0261364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=7]
+curve = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+direction = Vector3( 0, 1, 0 )
+spread = 55.35
+initial_velocity = 11.49
+scale_curve = SubResource( 7 )
+color_ramp = SubResource( 4 )
+
+[sub_resource type="SpatialMaterial" id=5]
+vertex_color_use_as_albedo = true
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id=2]
+material = SubResource( 5 )
+
+[node name="Particles" type="Particles"]
+lifetime = 5.0
+speed_scale = 3.0
+explosiveness = 1.0
+process_material = SubResource( 1 )
+draw_pass_1 = SubResource( 2 )

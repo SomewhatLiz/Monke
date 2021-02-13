@@ -1,0 +1,247 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Art/weaponpack_assets/Models/pistol.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://Guns/BaseGun.gd" type="Script" id=2]
+[ext_resource path="res://Guns/Bullet.gd" type="Script" id=3]
+[ext_resource path="res://Art/vcr_osd_mono/VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Fire"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Pistol:translation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Pistol:translation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Pistol:translation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.0672412, 0.00529024, 0.0672412, -0.00529024, -0.00848669, -0.234639, -0.00251772, 0.105642, 0.00113355, 0, -0.169907, -0.00480691, 0.0985906, 0.00278927 ),
+"times": PoolRealArray( 0, 0.2, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Pistol:rotation_degrees:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, 0, -930465, 0, 0.00600575, -13.2102, -0.212459, -16.5201, 0.0359224, 2.7932, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.5 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Pistol:rotation_degrees:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = false
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Pistol:rotation_degrees:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 1 )
+}
+
+[sub_resource type="Animation" id=2]
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pistol/AmmoView/Viewport/VBoxContainer/CurrentAmmo:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.74 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ "Reloading", "Reloading.", "Reloading..", "Reloading..." ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pistol/AmmoView/Viewport/VBoxContainer/CurrentAmmo:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( -0.02, 0.75 ),
+"transitions": PoolRealArray( 2.64542e-07, 1 ),
+"update": 1,
+"values": [ Vector2( 0.75, 0.75 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Pistol:rotation_degrees:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.0564473, -119.524, 0.149122, 315.758, 408.758, -0.091119, -21.4465, 0.152224, 35.8285, 360.758, -0.504861, 83, 0.405206, -66.6166 ),
+"times": PoolRealArray( 0, 0.37, 0.98 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Pistol:rotation_degrees:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.51, 0.99 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Pistol:rotation_degrees:z")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.51, 0.99 )
+}
+
+[sub_resource type="QuadMesh" id=3]
+size = Vector2( 0.025, 0.025 )
+
+[sub_resource type="ViewportTexture" id=4]
+viewport_path = NodePath("Pistol/AmmoView/Viewport")
+
+[sub_resource type="SpatialMaterial" id=5]
+resource_local_to_scene = true
+flags_transparent = true
+albedo_texture = SubResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 12
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="RayShape" id=8]
+length = 1000.0
+
+[node name="BaseGun" type="Spatial"]
+transform = Transform( 15, 0, 0, 0, 15, 0, 0, 0, 15, 0, 0, 0 )
+script = ExtResource( 2 )
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+anims/Fire = SubResource( 1 )
+anims/Reloading = SubResource( 2 )
+
+[node name="Pistol" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+material/13 = null
+
+[node name="AmmoView" type="Spatial" parent="Pistol"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0828196, -0.0013999, -0.0445969 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Pistol/AmmoView"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -0.0782644, 0.00706034, 0.0401581 )
+mesh = SubResource( 3 )
+material/0 = SubResource( 5 )
+
+[node name="Viewport" type="Viewport" parent="Pistol/AmmoView"]
+size = Vector2( 100, 100 )
+transparent_bg = true
+render_target_v_flip = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pistol/AmmoView/Viewport"]
+margin_right = 40.0
+margin_bottom = 40.0
+alignment = 1
+
+[node name="CurrentAmmo" type="Label" parent="Pistol/AmmoView/Viewport/VBoxContainer"]
+margin_right = 81.0
+margin_bottom = 15.0
+size_flags_horizontal = 13
+custom_fonts/font = SubResource( 6 )
+text = "Reloading"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClipSize" type="Label" parent="Pistol/AmmoView/Viewport/VBoxContainer"]
+margin_top = 19.0
+margin_right = 81.0
+margin_bottom = 44.0
+custom_fonts/font = SubResource( 7 )
+text = "16
+"
+align = 1
+
+[node name="Muzzle" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0140041, 0.0224157 )
+
+[node name="Firerate" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.1
+one_shot = true
+
+[node name="Reload" type="Timer" parent="."]
+process_mode = 0
+one_shot = true
+
+[node name="BulletTime" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.02
+one_shot = true
+
+[node name="Bullet" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.014, 0.022 )
+collision_layer = 0
+collision_mask = 2147483648
+script = ExtResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Bullet"]
+shape = SubResource( 8 )
+[connection signal="timeout" from="Reload" to="." method="_on_Reload_timeout"]
+[connection signal="timeout" from="BulletTime" to="." method="_on_BulletTime_timeout"]
